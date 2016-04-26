@@ -17,8 +17,8 @@ Module.expectedDataFileDownloads++;
     } else {
       throw 'using preloaded data can only be done on a web page or in a web worker';
     }
-    var PACKAGE_NAME = 'Block Breaker.data';
-    var REMOTE_PACKAGE_BASE = 'Block Breaker.data';
+    var PACKAGE_NAME = 'Block-Breaker.data';
+    var REMOTE_PACKAGE_BASE = 'Block-Breaker.data';
     if (typeof Module['locateFilePackage'] === 'function' && !Module['locateFile']) {
       Module['locateFile'] = Module['locateFilePackage'];
       Module.printErr('warning: you defined Module.locateFilePackage, that has been renamed to Module.locateFile (using your locateFilePackage for now)');
@@ -27,7 +27,7 @@ Module.expectedDataFileDownloads++;
                               Module['locateFile'](REMOTE_PACKAGE_BASE) :
                               ((Module['filePackagePrefixURL'] || '') + REMOTE_PACKAGE_BASE);
     var REMOTE_PACKAGE_SIZE = 8887035;
-    var PACKAGE_UUID = '5fa3624f-986d-4ce5-9613-32e774a89380';
+    var PACKAGE_UUID = '42edd08d-8c67-47a9-addd-607f5697836b';
   
     function fetchRemotePackage(packageName, packageSize, callback, errback) {
       var xhr = new XMLHttpRequest();
@@ -168,10 +168,10 @@ Module['FS_createPath']('/', 'Resources', true, true);
           DataRequest.prototype.requests["/sharedassets5.assets"].onload();
           DataRequest.prototype.requests["/Resources/unity_default_resources"].onload();
           DataRequest.prototype.requests["/Resources/unity_builtin_extra"].onload();
-          Module['removeRunDependency']('datafile_Block Breaker.data');
+          Module['removeRunDependency']('datafile_Block-Breaker.data');
 
     };
-    Module['addRunDependency']('datafile_Block Breaker.data');
+    Module['addRunDependency']('datafile_Block-Breaker.data');
   
     if (!Module.preloadResults) Module.preloadResults = {};
   
